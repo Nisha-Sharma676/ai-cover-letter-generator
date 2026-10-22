@@ -5,6 +5,9 @@ import { GoogleGenAI } from "@google/genai";
 dotenv.config();
 
 const app = express();
+app.get("/", (req, res) => {
+  res.sendFile(process.cwd() + "/index.html");
+});
 const PORT = 3000;
 
 app.use(express.json());
